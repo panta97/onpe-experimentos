@@ -15,4 +15,7 @@ public interface IDistritoService {
 	public void update(int id, String nombre);
 	
 	public void delete(int id);
+	
+	public boolean exists(int id);
 }
+

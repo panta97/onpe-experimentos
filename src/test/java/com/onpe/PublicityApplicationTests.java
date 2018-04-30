@@ -38,9 +38,9 @@ public class PublicityApplicationTests {
 	@Test
 	public void contextLoads() {
 		
-//		entityDistrito("CREATE");
+		entityDistrito("CREATE");
 //		entityPartidoPolitico("CREATE");
-		entityCandidato("CREATE");
+//		entityCandidato("CREATE");
 //		entityUsuario("RETRIEVE");
 	
 	}
@@ -55,6 +55,8 @@ public class PublicityApplicationTests {
 			distrito.setEstado("ACT");
 			
 			distritoService.save(distrito);
+			
+			System.out.println(distrito.getId());
 			
 			break;
 		case "UPDATE":

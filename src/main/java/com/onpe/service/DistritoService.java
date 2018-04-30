@@ -42,5 +42,11 @@ public class DistritoService implements IDistritoService{
 	public void delete(int id) {
 		distritoRepository.delete(id);
 	}
-
+	
+	//TEST
+	@Override
+	public boolean exists(int id) {
+		return distritoRepository.exists(id);
+	}
+	
 }

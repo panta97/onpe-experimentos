@@ -8,6 +8,7 @@ import com.onpe.entity.Candidato;
 
 public interface CandidatoRepository extends JpaRepository<Candidato, Integer>{
 	
+	//UPDATE `mydb`.`candidato` SET `nombre_candidato`='Roosevelt', `apellido_candidato`='Pantaleon Vara' WHERE `id_candidato`='1';
 	@Modifying
 	@Query (value="UPDATE `candidato` SET `nombre_candidato`=?2, `apellido_candidato`=?3 WHERE `id_candidato`=?1", nativeQuery=true)
 	public void update(Integer id, String nombre, String apellido);

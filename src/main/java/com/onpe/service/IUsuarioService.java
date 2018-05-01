@@ -13,4 +13,8 @@ public interface IUsuarioService {
 	public List<Usuario> findAll();
 	
 	public void update(int id, String nombre, String apellido);
+	
+	public void delete(int id);
+	
+	public boolean exists(int id);
 }

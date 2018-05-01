@@ -33,5 +33,16 @@ public class UsuarioService implements IUsuarioService{
 	public void update(int id, String nombre, String apellido) {
 		usuarioRepository.update(id, nombre, apellido);	
 	}
+	
+	@Override
+	public void delete(int id) {
+		usuarioRepository.delete(id);
+	}
+
+	@Override
+	public boolean exists(int id) {
+		return usuarioRepository.exists(id);
+	}
+
 
 }

@@ -42,4 +42,10 @@ public class PartidoPoliticoService implements IPartidoPoliticoService{
 	public void delete(int id) {
 		partidoPoliticoRepository.delete(id);
 	}
+
+	//TEST
+	@Override
+	public boolean exists(int id) {
+		return partidoPoliticoRepository.exists(id);
+	}
 }

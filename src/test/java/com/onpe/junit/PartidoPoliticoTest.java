@@ -13,18 +13,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.onpe.entity.Distrito;
-import com.onpe.service.IDistritoService;
+import com.onpe.entity.PartidoPolitico;
+import com.onpe.service.IPartidoPoliticoService;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
-public class DistritoTest {
+public class PartidoPoliticoTest {
 	
 	@Autowired
-	private IDistritoService distritoService;
-	private static Distrito distrito;
-	
+	private IPartidoPoliticoService partidoPoliticoService;
+	private static PartidoPolitico partidoPolitico;
 	
 	@BeforeClass
 	public static void inicioClase() {
@@ -47,20 +46,19 @@ public class DistritoTest {
 	}
 	
 	@Test
-	public void a_insertar() {
+	public void a_ingresar() {
 		try {
-			System.out.println("Met. Insertar");
 			
-			//Datos de Entrada
-			distrito = new Distrito();
-			distrito.setNombre("LIMA");
-			distrito.setEstado("ACT");
-						
-			//Ejecutar Prueba
-			distritoService.save(distrito);
+			System.out.println("Met. Ingresar");
+
 			
-			//Validar la prueba
-			Assert.assertTrue(distritoService.exists(distrito.getId()));
+			partidoPolitico = new PartidoPolitico();
+			partidoPolitico.setNombre("APRA");
+			partidoPolitico.setEstado("ACT");
+			
+			partidoPoliticoService.save(partidoPolitico);
+			
+			Assert.assertTrue(partidoPoliticoService.exists(partidoPolitico.getId()));
 			
 			
 		} catch (Exception e) {
@@ -76,20 +74,11 @@ public class DistritoTest {
 			
 			System.out.println("Met. Leer");
 
-			
-			//Datos de Entrada
-			//Ejecutar Prueba
-			
-			Distrito distritoToRetrieve = new Distrito();
-			distritoToRetrieve = distritoService.findById(distrito.getId());
+			PartidoPolitico partidoPoliticoToRetrive = new PartidoPolitico();
+			partidoPoliticoToRetrive = partidoPoliticoService.findById(partidoPolitico.getId());
 			
 			
-			//Ejecutar Prueba
-//			Assert.assertSame(distrito, distritoToRetrieve);
-			Assert.assertEquals(distritoToRetrieve.getId(), distrito.getId());
-			
-			
-			
+			Assert.assertEquals(partidoPoliticoToRetrive.getId(), partidoPolitico.getId());
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();
@@ -97,43 +86,34 @@ public class DistritoTest {
 		}
 	}
 	
-//	Assert.assertTrue(EqualsBuilder.reflectionEquals(expected,actual));
-
 	@Test
 	public void c_editar() {
 		try {
 			
 			System.out.println("Met. Editar");
 
-			//Datos de Entrada
-			//Ejecutar Prueba
 			
-			String newNombre = "CUZCO";
+			String newNombre = "PPC";
 			
-			distritoService.update(distrito.getId(), newNombre);
+			partidoPoliticoService.udpate(partidoPolitico.getId(), newNombre);
 			
-			Assert.assertEquals(distritoService.findById(distrito.getId()).getNombre(), newNombre);
-			
+			Assert.assertEquals(partidoPoliticoService.findById(partidoPolitico.getId()).getNombre(), newNombre);			
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();
 			Assert.fail();
 		}
 	}
-	
 	
 	@Test
 	public void d_eliminar() {
 		try {
+			
 			System.out.println("Met. Eliminar");
+
+			partidoPoliticoService.delete(partidoPolitico.getId());
 			
-			//Datos de Entrada
-			//Ejecutar Prueba
-			distritoService.delete(distrito.getId());
-			
-			//Validar prueba
 			Assert.assertTrue(true);
-			
 			
 		} catch (Exception e) {
 			// TODO: handle exception
@@ -141,5 +121,6 @@ public class DistritoTest {
 			Assert.fail();
 		}
 	}
-
+	
+	
 }

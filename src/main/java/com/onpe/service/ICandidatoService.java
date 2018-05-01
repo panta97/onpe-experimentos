@@ -15,4 +15,6 @@ public interface ICandidatoService {
 	public List<Candidato> findAll();
 	
 	public void delete(int id);
+	
+	public boolean exists(int id);
 }

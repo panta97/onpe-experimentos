@@ -13,18 +13,27 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import com.onpe.entity.Candidato;
 import com.onpe.entity.Distrito;
+import com.onpe.entity.PartidoPolitico;
+import com.onpe.service.ICandidatoService;
 import com.onpe.service.IDistritoService;
+import com.onpe.service.IPartidoPoliticoService;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
-public class DistritoTest {
+public class CandidatoTest {
 	
 	@Autowired
+	private ICandidatoService candidatoService;
+	@Autowired
 	private IDistritoService distritoService;
+	@Autowired
+	private IPartidoPoliticoService partidoPoliticoService;
+	private static Candidato candidato;
 	private static Distrito distrito;
-	
+	private static PartidoPolitico partidoPolitico;
 	
 	@BeforeClass
 	public static void inicioClase() {
@@ -44,7 +53,9 @@ public class DistritoTest {
 	@After
 	public void finTest() {
 		System.out.println("Despues del Test");
+			
 	}
+	
 	
 	@Test
 	public void a_insertar() {
@@ -52,15 +63,30 @@ public class DistritoTest {
 			System.out.println("Met. Insertar");
 			
 			//Datos de Entrada
+			
 			distrito = new Distrito();
 			distrito.setNombre("LIMA");
 			distrito.setEstado("ACT");
+			distritoService.save(distrito);
+
+			partidoPolitico = new PartidoPolitico();
+			partidoPolitico.setNombre("APRA");
+			partidoPolitico.setEstado("ACT");
+			partidoPoliticoService.save(partidoPolitico);
+			
+			candidato = new Candidato();
+			candidato.setApellido("Terry");
+			candidato.setNombre("Alan");
+			candidato.setDistrito(distrito);
+			candidato.setPartidoPolitico(partidoPolitico);
+			candidato.setEstado("ACT");
 						
 			//Ejecutar Prueba
-			distritoService.save(distrito);
+			
+			candidatoService.save(candidato);
 			
 			//Validar la prueba
-			Assert.assertTrue(distritoService.exists(distrito.getId()));
+			Assert.assertTrue(candidatoService.exists(candidato.getId()));
 			
 			
 		} catch (Exception e) {
@@ -70,7 +96,7 @@ public class DistritoTest {
 		}
 	}
 	
-	@Test
+//	@Test
 	public void b_leer() {
 		try {
 			
@@ -80,14 +106,11 @@ public class DistritoTest {
 			//Datos de Entrada
 			//Ejecutar Prueba
 			
-			Distrito distritoToRetrieve = new Distrito();
-			distritoToRetrieve = distritoService.findById(distrito.getId());
-			
+			Candidato candidatoToRetrieve = new Candidato();
+			candidatoToRetrieve = candidatoService.findById(candidato.getId());
 			
 			//Ejecutar Prueba
-//			Assert.assertSame(distrito, distritoToRetrieve);
-			Assert.assertEquals(distritoToRetrieve.getId(), distrito.getId());
-			
+			Assert.assertEquals(candidatoToRetrieve.getId(), candidato.getId());	
 			
 			
 		} catch (Exception e) {
@@ -108,11 +131,21 @@ public class DistritoTest {
 			//Datos de Entrada
 			//Ejecutar Prueba
 			
-			String newNombre = "CUZCO";
+			String newNombre = "PEDRO";
+			String newApellido = "KUCZYNSKI";
 			
-			distritoService.update(distrito.getId(), newNombre);
+			candidatoService.update(candidato.getId(), newNombre, newApellido);
 			
-			Assert.assertEquals(distritoService.findById(distrito.getId()).getNombre(), newNombre);
+			
+			String errorStr = "";
+			if(!newNombre.equals(candidatoService.findById(candidato.getId()).getNombre())) {
+				errorStr += "expected: " + newNombre + ", actual: " + candidatoService.findById(candidato.getId()).getNombre() + "\n";
+			}
+			if(!newApellido.equals(candidatoService.findById(candidato.getId()).getApellido())) {
+				errorStr += "expected: " + newApellido + ", actual: " + candidatoService.findById(candidato.getId()).getApellido() + "\n";
+			}
+			
+			Assert.assertEquals("", errorStr);
 			
 		} catch (Exception e) {
 			// TODO: handle exception
@@ -122,14 +155,14 @@ public class DistritoTest {
 	}
 	
 	
-	@Test
+//	@Test
 	public void d_eliminar() {
 		try {
 			System.out.println("Met. Eliminar");
 			
 			//Datos de Entrada
 			//Ejecutar Prueba
-			distritoService.delete(distrito.getId());
+			candidatoService.delete(candidato.getId());
 			
 			//Validar prueba
 			Assert.assertTrue(true);
@@ -141,5 +174,5 @@ public class DistritoTest {
 			Assert.fail();
 		}
 	}
-
+	
 }

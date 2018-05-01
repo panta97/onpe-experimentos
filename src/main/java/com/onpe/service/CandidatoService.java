@@ -42,4 +42,10 @@ public class CandidatoService implements ICandidatoService{
 	public void delete(int id) {
 		candidatoRepository.delete(id);
 	}
+	
+	//TEST
+	@Override
+	public boolean exists(int id) {
+		return candidatoRepository.exists(id);
+	}
 }

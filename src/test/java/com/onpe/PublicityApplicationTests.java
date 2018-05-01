@@ -38,9 +38,9 @@ public class PublicityApplicationTests {
 	@Test
 	public void contextLoads() {
 		
-		entityDistrito("CREATE");
+//		entityDistrito("CREATE");
 //		entityPartidoPolitico("CREATE");
-//		entityCandidato("CREATE");
+		entityCandidato("CREATE");
 //		entityUsuario("RETRIEVE");
 	
 	}
@@ -117,7 +117,15 @@ public class PublicityApplicationTests {
 			candidato.setPartidoPolitico(partidoPolitico);
 			
 		
+			System.out.println("------------------------------ASDFASDFASDFASDF---------------------------");
 			candidatoService.save(candidato);
+			
+			
+			
+			//update
+			
+			candidatoService.update(candidato.getId(), "sdf", "sdf");
+			
 			
 			break;
 		case "UPDATE":

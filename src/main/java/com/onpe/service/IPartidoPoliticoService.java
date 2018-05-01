@@ -16,4 +16,6 @@ public interface IPartidoPoliticoService {
 			
 	public void delete(int id);
 	
+	public boolean exists(int id);
+	
 }

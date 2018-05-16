@@ -96,7 +96,7 @@ public class CandidatoTest {
 		}
 	}
 	
-//	@Test
+	@Test
 	public void b_leer() {
 		try {
 			

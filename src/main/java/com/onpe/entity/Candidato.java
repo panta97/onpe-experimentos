@@ -24,7 +24,7 @@ public class Candidato {
 	
 	@ManyToOne(fetch=FetchType.EAGER)
 	@JoinColumn(name="id_partidopolitico")
-	private PartidoPolitico partidopolitico;
+	public PartidoPolitico partidopolitico;
 	
 	@ManyToOne(fetch=FetchType.EAGER)
 	@JoinColumn(name="id_distrito")

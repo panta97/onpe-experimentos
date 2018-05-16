@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.com">
+<head th:replace="shared/head :: head"/>
+<body>
+	
+	<div th:replace="shared/header :: header"></div>
+	
+	<div class="list-wrapper" style="margin: 25px;">
+    <h2>Distritos</h2>
+
+    <div class="table-responsive">
+      <table class="table table-striped table-sm">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Nombre</th>
+            <th>Estado</th>
+          </tr>
+        </thead>
+        <tbody>
+        	<tr th:each="d:${distritos}">
+        		<td th:text="${d.id}"></td>
+          		<td th:text="${d.nombre}"></td>
+          		<td th:text="${d.estado}"></td>
+         	</tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+	
+	
+</body>
+</html>

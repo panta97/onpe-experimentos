@@ -58,6 +58,14 @@ public class Candidato {
 	public void setPartidoPolitico(PartidoPolitico partidoPolitico) {
 		this.partidopolitico = partidoPolitico;
 	}
+	
+	public PartidoPolitico getPartidopolitico() {
+		return partidopolitico;
+	}
+
+	public void setPartidopolitico(PartidoPolitico partidoPolitico) {
+		this.partidopolitico = partidoPolitico;
+	}
 
 	public Distrito getDistrito() {
 		return distrito;

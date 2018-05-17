@@ -10,13 +10,13 @@
     <div class="row">
       <div class="col-md-3"></div>
       <div class="col-md-6">
-        <h4 class="mb-3">Nuevo Distrito</h4>
-        <form method="POST" th:action="@{/distrito/save}" th:object="${distrito}">
+        <h4 class="mb-3">Editar Partido</h4>
+        <form method="POST" th:action="@{/partido/save}" th:object="${partido}">
     	  <input type="hidden" th:field="*{id}"></input>
     		
           <div class="mb-3">
             <label for="nombre">Nombre</label>
-            <input type="text" class="form-control" id="nombre" placeholder="mi distrito" required=""
+            <input type="text" class="form-control" id="nombre" placeholder="mi partido" required=""
             th:field="*{nombre}"/>
             <div class="invalid-feedback">
               Please provide a valid state.

@@ -10,6 +10,8 @@ public interface IUsuarioService {
 	
 	public Usuario findById(int id);
 	
+	public Usuario findByNombre(String nombre);
+	
 	public List<Usuario> findAll();
 	
 	public void update(int id, String nombre, String apellido);

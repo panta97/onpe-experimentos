@@ -4,11 +4,9 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
-import org.springframework.test.context.web.WebAppConfiguration;
+import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -16,19 +14,21 @@ import org.testng.annotations.Test;
 import com.onpe.OnpeApplication;
 
 
-@WebAppConfiguration
-@ContextConfiguration("file:src/test/java/testng.xml")
-public class DistritoWebDriverTest extends AbstractTestNGSpringContextTests {
+public class DistritoWebDriverTest {
 	
 	private WebDriver driver;
-	private String urlInicial = "http://localhost:8080/";
+	private String urlInicial = "http://localhost:8080/application-0.0.1-SNAPSHOT/login/";
 	
 	@BeforeTest
 	public void setUp() throws Exception {
-		System.setProperty("webdriver.gecko.driver", "C:\\ProgramasInstalados\\geckodriver.exe");
+//		System.setProperty("webdriver.gecko.driver", "C:\\ProgramasInstalados\\geckodriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\ProgramasInstalados\\chromedriver.exe");
 		
-		driver = new FirefoxDriver();
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+//		driver = new FirefoxDriver();
+		
+
+		driver = new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 	}
 	
@@ -39,8 +39,8 @@ public class DistritoWebDriverTest extends AbstractTestNGSpringContextTests {
 			String mensajeEsperado = "Success";
 			String mensajeObtenido;
 			
-			
 			driver.get(urlInicial);
+
 			
 			driver.findElement(By.id("user")).clear();
 			driver.findElement(By.id("user")).sendKeys("user");
@@ -59,7 +59,7 @@ public class DistritoWebDriverTest extends AbstractTestNGSpringContextTests {
 			
 			
 
-			
+			Assert.assertEquals(true, true);
 			
 		} catch (Exception e) {
 			// TODO: handle exception

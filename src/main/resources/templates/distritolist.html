@@ -6,10 +6,20 @@
 	<div th:replace="shared/header :: header"></div>
 	
 	<div class="list-wrapper" style="margin: 25px;">
+	
     <h2 style="display: inline-block">Distritos</h2>
-    <a href="/distrito/add">
-    <h2 id="hNuevoDistrito" style="float: right; color: #007bff">Nuevo</h2>
-    </a>
+
+    <div style="float: right;">
+      <a href="add">
+        <h2 id="btnNuevo" style="color: #007bff">Nuevo</h2>
+      </a>
+    </div>
+
+    <div id="message" style="text-align: center;" th:if="${objResult} == true">
+      <div class="alert alert-success" role="alert" style="display: inline-block">
+          <span th:text="${resultado}"></span>
+      </div>
+    </div>
 
     <div class="table-responsive">
       <table class="table table-striped table-sm">
@@ -32,7 +42,8 @@
       </table>
     </div>
   </div>
-	
-	
+  <script>
+    $('#message').delay(2000).fadeOut(500)
+  </script>	
 </body>
 </html>

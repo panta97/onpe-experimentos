@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.onpe.entity.Candidato;
 import com.onpe.service.ICandidatoService;
@@ -58,14 +59,15 @@ public class CandidatoController {
 	}
 	
 	@PostMapping("/save")
-	public String save(Candidato candidato, Model model) {
+	public String save(Candidato candidato, Model model, RedirectAttributes redirect) {
 		Candidato objResult = candidatoService.save(candidato);
 		
 		if(objResult == null) {
 			model.addAttribute("resultado", "Ocurrio un error");
 			return "mensaje";
 		} else {
-			model.addAttribute("resultado", "Candidato guardado");
+			redirect.addFlashAttribute("objResult", true);
+			redirect.addFlashAttribute("resultado", "Candidato guardado");
 			return "redirect:/candidato/list";
 		}
 	}

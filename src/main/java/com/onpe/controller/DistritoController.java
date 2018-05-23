@@ -4,13 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.onpe.entity.Distrito;
 import com.onpe.service.IDistritoService;
@@ -46,14 +46,17 @@ public class DistritoController {
 	}
 	
 	@PostMapping("/save")
-	public String save(Distrito distrito, Model model) {
+	public String save(Distrito distrito, Model model, RedirectAttributes redirect) {
 		Distrito objResult = distritoService.save(distrito);
 		
 		if(objResult == null) {
-			model.addAttribute("resultado", "Ocurrio un error");
+			model.addAttribute("objResult", false);
+			model.addAttribute("resultado", "Campo Vacio");
 			return "mensaje";
 		}else{
-			model.addAttribute("resultado", "Distrito guardado");
+			
+			redirect.addFlashAttribute("objResult", true);
+			redirect.addFlashAttribute("resultado", "Distrito guardado");
 			return "redirect:/distrito/list";
 		
 		}

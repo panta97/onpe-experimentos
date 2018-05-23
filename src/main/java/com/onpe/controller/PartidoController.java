@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.onpe.entity.PartidoPolitico;
 import com.onpe.service.IPartidoPoliticoService;
@@ -44,14 +45,15 @@ public class PartidoController {
 	}
 	
 	@PostMapping("/save")
-	public String save(PartidoPolitico partido, Model model) {
+	public String save(PartidoPolitico partido, Model model, RedirectAttributes redirect) {
 		PartidoPolitico objResult = partidoPoliticoService.save(partido);
 		
 		if(objResult == null) {
 			model.addAttribute("resultado", "Ocurrio un error");
 			return "mensaje";
 		}else{
-			model.addAttribute("resultado", "Partido guardado");
+			redirect.addFlashAttribute("objResult", true);
+			redirect.addFlashAttribute("resultado", "Partido guardado");
 			return "redirect:/partido/list";
 		
 		}

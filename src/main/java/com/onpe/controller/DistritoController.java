@@ -47,6 +47,15 @@ public class DistritoController {
 	
 	@PostMapping("/save")
 	public String save(Distrito distrito, Model model, RedirectAttributes redirect) {
+		
+		String resultado;
+		
+		if(distrito.getId() != 0) {
+			resultado = "Distrito actualizado";
+		} else {
+			resultado = "Distrito guardado";
+		}
+		
 		Distrito objResult = distritoService.save(distrito);
 		
 		if(objResult == null) {
@@ -56,7 +65,7 @@ public class DistritoController {
 		}else{
 			
 			redirect.addFlashAttribute("objResult", true);
-			redirect.addFlashAttribute("resultado", "Distrito guardado");
+			redirect.addFlashAttribute("resultado", resultado);
 			return "redirect:/distrito/list";
 		
 		}
@@ -76,6 +85,32 @@ public class DistritoController {
 		
 		return "distritoadd";
 
+	}
+	
+	@GetMapping("/delete/{id}")
+	public String todelete(@PathVariable int id, Model model) {
+		
+		List<String> estados = new ArrayList<String>();
+		estados.add("ACT");
+		estados.add("INA");
+		 
+		model.addAttribute("estado", estados);
+		
+		model.addAttribute("distrito", distritoService.findById(id));
+		
+		return "distritodelete";
+		
+	}
+	
+	@PostMapping("/delete")
+	public String delete(Distrito distrito, Model model, RedirectAttributes redirect) {
+		String resultado = "Distrito eliminado";
+		distritoService.delete(distrito.getId());
+		
+		redirect.addFlashAttribute("objResult", true);
+		redirect.addFlashAttribute("resultado", resultado);
+		return "redirect:/distrito/list";
+		
 	}
 		
 }

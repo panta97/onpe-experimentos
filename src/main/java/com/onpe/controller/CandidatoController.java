@@ -60,6 +60,15 @@ public class CandidatoController {
 	
 	@PostMapping("/save")
 	public String save(Candidato candidato, Model model, RedirectAttributes redirect) {
+		
+		String resultado;
+		
+		if(candidato.getId() != 0) {
+			resultado = "Candidato actualizado";
+		} else {
+			resultado = "Candidato guardado";
+		}
+		
 		Candidato objResult = candidatoService.save(candidato);
 		
 		if(objResult == null) {
@@ -67,7 +76,7 @@ public class CandidatoController {
 			return "mensaje";
 		} else {
 			redirect.addFlashAttribute("objResult", true);
-			redirect.addFlashAttribute("resultado", "Candidato guardado");
+			redirect.addFlashAttribute("resultado", resultado);
 			return "redirect:/candidato/list";
 		}
 	}
@@ -88,6 +97,34 @@ public class CandidatoController {
 		model.addAttribute("candidato", new Candidato());
 		
 		return "candidatoadd";
+	}
+	
+	@GetMapping("delete/{id}")
+	public String todelete(@PathVariable int id, Model model) {
+		
+		List<String> estados = new ArrayList<String>();
+		estados.add("ACT");
+		estados.add("INA");
+		
+		model.addAttribute("estado", estados);
+		
+		model.addAttribute("distrito", distritoService.findAll());
+		
+		model.addAttribute("partido", partidoService.findAll());
+		
+		model.addAttribute("candidato", candidatoService.findById(id));
+		
+		return "candidatodelete";
+	}
+	
+	@PostMapping("/delete")
+	public String delete(Candidato candidato, Model model, RedirectAttributes redirect) {
+		String resultado = "Candidato eliminado";
+		candidatoService.delete(candidato.getId());
+		
+		redirect.addFlashAttribute("objResult", true);
+		redirect.addFlashAttribute("resultado", resultado);
+		return "redirect:/candidato/list";
 	}
 	
 }

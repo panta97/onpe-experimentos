@@ -46,6 +46,15 @@ public class PartidoController {
 	
 	@PostMapping("/save")
 	public String save(PartidoPolitico partido, Model model, RedirectAttributes redirect) {
+		
+		String resultado;
+		
+		if(partido.getId() != 0) {
+			resultado = "Partido actualizado";
+		} else {
+			resultado = "Partido guardado";
+		}
+		
 		PartidoPolitico objResult = partidoPoliticoService.save(partido);
 		
 		if(objResult == null) {
@@ -53,7 +62,7 @@ public class PartidoController {
 			return "mensaje";
 		}else{
 			redirect.addFlashAttribute("objResult", true);
-			redirect.addFlashAttribute("resultado", "Partido guardado");
+			redirect.addFlashAttribute("resultado", resultado);
 			return "redirect:/partido/list";
 		
 		}
@@ -71,6 +80,30 @@ public class PartidoController {
 		model.addAttribute("partido", new PartidoPolitico());
 		
 		return "partidoadd";
+	}
+	
+	@GetMapping("/delete/{id}")
+	public String todelete(@PathVariable int id, Model model) {
+		
+		List<String> estados = new ArrayList<String>();
+		estados.add("ACT");
+		estados.add("INA");
+		
+		model.addAttribute("estado", estados);
+		
+		model.addAttribute("partido", partidoPoliticoService.findById(id));
+		
+		return "partidodelete";
+	}
+	
+	@PostMapping("/delete")
+	public String delete(PartidoPolitico partido, Model model, RedirectAttributes redirect) {
+		String resultado = "Partido eliminado";
+		partidoPoliticoService.delete(partido.getId());
+		
+		redirect.addFlashAttribute("objResult", true);
+		redirect.addFlashAttribute("resultado", resultado);
+		return "redirect:/partido/list";
 	}
 	
 }

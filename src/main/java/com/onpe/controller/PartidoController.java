@@ -48,11 +48,22 @@ public class PartidoController {
 	public String save(PartidoPolitico partido, Model model, RedirectAttributes redirect) {
 		
 		String resultado;
+		String redirectLink;
 		
 		if(partido.getId() != 0) {
 			resultado = "Partido actualizado";
+			redirectLink = "redirect:/partido/edit/" + String.valueOf(partido.getId());
 		} else {
 			resultado = "Partido guardado";
+			redirectLink = "redirect:/partido/add";
+		}
+		
+		if(partido.getNombre().length() <= 0 || partido.getEstado().length() <= 0) {
+			resultado = "Campo(s) incompleto(s)";
+			redirect.addFlashAttribute("objResult", true);
+			redirect.addFlashAttribute("resultado", resultado);
+			
+			return redirectLink;
 		}
 		
 		PartidoPolitico objResult = partidoPoliticoService.save(partido);

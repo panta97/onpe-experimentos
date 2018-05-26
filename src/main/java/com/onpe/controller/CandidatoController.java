@@ -62,11 +62,22 @@ public class CandidatoController {
 	public String save(Candidato candidato, Model model, RedirectAttributes redirect) {
 		
 		String resultado;
+		String redirectLink;
 		
 		if(candidato.getId() != 0) {
 			resultado = "Candidato actualizado";
+			redirectLink = "redirect:/candidato/edit/" + String.valueOf(candidato.getId());
 		} else {
 			resultado = "Candidato guardado";
+			redirectLink = "redirect:/candidato/add";
+		}
+		
+		if(candidato.getNombre().length() <= 0 || candidato.getApellido().length() <= 0 || candidato.getEstado().length() <= 0) {
+			resultado = "Campo(s) incompleto(s)";
+			redirect.addFlashAttribute("objResult", true);
+			redirect.addFlashAttribute("resultado", resultado);
+			
+			return redirectLink;
 		}
 		
 		Candidato objResult = candidatoService.save(candidato);

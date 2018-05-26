@@ -49,11 +49,22 @@ public class DistritoController {
 	public String save(Distrito distrito, Model model, RedirectAttributes redirect) {
 		
 		String resultado;
+		String redirectLink;
 		
 		if(distrito.getId() != 0) {
 			resultado = "Distrito actualizado";
+			redirectLink = "redirect:/distrito/edit/" + String.valueOf(distrito.getId());
 		} else {
 			resultado = "Distrito guardado";
+			redirectLink = "redirect:/distrito/add";
+		}
+		
+		if(distrito.getNombre().length() <= 0 || distrito.getEstado().length() <= 0) {
+			resultado = "Campo(s) incompleto(s)";
+			redirect.addFlashAttribute("objResult", true);
+			redirect.addFlashAttribute("resultado", resultado);
+			
+			return redirectLink;
 		}
 		
 		Distrito objResult = distritoService.save(distrito);

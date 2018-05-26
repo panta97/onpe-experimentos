@@ -25,7 +25,7 @@
 
           <div class="mb-3">
               <label for="state">Estado</label>
-              <select class="custom-select d-block w-100" id="state"
+              <select class="custom-select d-block w-100" id="estadoSelect"
               th:field="*{estado}">
                 <option th:each="e:${estado}" th:value="${e}" th:text="${e}"></option>
               </select>
@@ -36,9 +36,11 @@
       
           <hr class="mb-4"/>
           
-          <div id="alert" class="alert alert-danger" role="alert" th:if="${objResult} == false">
-          	<span th:text="${resultado}"></span>
-          </div> 
+          <div id="message" style="text-align: center;" th:if="${objResult} == true">
+      <div class="alert alert-danger" role="alert">
+          <span th:text="${resultado}"></span>
+      </div>
+    </div>
           
           <button id="btnGuardar" class="btn btn-primary btn-md" type="submit">Guardar</button>
         </form>

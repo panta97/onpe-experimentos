@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.com">
+<head>	
+	<div th:replace="shared/head :: head"></div>
+	
+	<link rel="stylesheet" href="css/login.css"/>
+
+</head>
+<body class="text-center">
+	
+	<form class="form-signin"
+		method="POST" th:action="@{/signup}" th:object="${usuario}">
+		
+		
+    <h1 class="h3 mb-3 font-weight-normal">Sign up</h1>
+    <input type="text" id="inputUser" class="form-control" placeholder="Email address" required="" autofocus=""
+    	th:field="*{nombre}"/>
+    <input type="password" id="inputPassword" class="form-control password" placeholder="Password" required=""
+    	th:field="*{password}"/>    
+    <input type="password" id="inputPasswordConfirm" class="form-control confirm-password" placeholder="Confirm Password" required=""/>
+
+    <button class="btn btn-lg btn-primary btn-block btnSignUp" type="submit">Registrarme</button>
+    <p class="mt-5 mb-3 text-muted">© 2017-2018</p>
+  </form>
+
+</body>
+
+</html>

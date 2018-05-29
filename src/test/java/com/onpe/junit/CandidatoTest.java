@@ -122,7 +122,7 @@ public class CandidatoTest {
 	
 //	Assert.assertTrue(EqualsBuilder.reflectionEquals(expected,actual));
 
-	@Test
+//	@Test
 	public void c_editar() {
 		try {
 			

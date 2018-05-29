@@ -13,12 +13,13 @@ import com.onpe.entity.Usuario;
 @Transactional
 public interface UsuarioRepository extends JpaRepository<Usuario, Integer>{
 	 
+	public Usuario findByNombre(String nombre);
+	public Usuario findById(Integer id);
+	
 	@Modifying
 	@Query (value="UPDATE `usuario` SET `nombre_usuario`=?2, `apellido_usuario`=?3 WHERE `id_usuario`=?1", nativeQuery=true)
 	public void update(Integer id, String nombre, String apellido);
 	
-	public Usuario findById(Integer id);
+	
 
 }
-
-//UPDATE `images`.`Photos` SET `PublicId`='sad', `Tag`='asd' WHERE `Id`='1';

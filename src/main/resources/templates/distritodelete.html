@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.com">
+<head th:replace="shared/head :: head"/>
+<body>
+	
+	<div th:replace="shared/header :: header"></div>
+	
+	 <div class="form-wrapper">
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+          <h4 class="mb-3">Eliminar Distrito</h4>
+          <form method="POST" th:action="@{/distrito/delete}" th:object="${distrito}">
+          <input type="hidden" th:field="*{id}"></input>
+          
+            <div class="mb-3">
+              <label for="nombre">Nombre</label>
+              <input type="text" class="form-control" id="nombre"
+              th:field="*{nombre}" disabled="disabled" ></input>
+              <div class="invalid-feedback">
+                Please provide a valid state.
+              </div>
+            </div>
+  
+            <div class="mb-3">
+                <label for="state">Estado</label>
+                <select class="custom-select d-block w-100" id="state"
+                th:field="*{estado}" disabled="disabled">
+                  <option th:each="e:${estado}" th:value="${e}" th:text="${e}"></option>
+                </select>
+                <div class="invalid-feedback">
+                  Please provide a valid state.
+                </div>
+              </div>
+        
+            <hr class="mb-4"/>
+            
+            <button id="btnEliminar" class="btn btn-danger btn-md" type="submit">Eliminar</button>
+            <a href="/OnpeWeb/distrito/list" class="btn btn-warning btn-md" role="button" aria-pressed="true">Cancelar</a>
+           
+          </form>
+        </div>
+        <div class="col-md-3"></div>
+      </div>
+    </div>	
+</body>
+</html>

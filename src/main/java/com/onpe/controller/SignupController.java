@@ -44,7 +44,7 @@ public class SignupController {
 			usuarioService.save(usuario);
 			
 			
-			return "redirect:/home";
+			return "redirect:/login";
 			
 		} catch (Exception e) {
 			

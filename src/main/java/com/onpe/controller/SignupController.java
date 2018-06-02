@@ -52,6 +52,8 @@ public class SignupController {
 			
 			usuarioService.save(usuario);
 			
+			redirect.addFlashAttribute("objResult", true);
+			redirect.addFlashAttribute("resultado", "nuevo usuario creado");
 			
 			return "redirect:/login";
 			

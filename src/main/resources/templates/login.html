@@ -18,8 +18,12 @@
     <input type="password" id="password" name="password" class="form-control" placeholder="password" required=""/>
     <div class="checkbox mb-3">
     </div>
+    <div id="message" style="text-align: center;" th:if="${objResult} == true">
+        <div class="alert alert-success" role="alert">
+            <span th:text="${resultado}"></span>
+        </div>
+    </div>
     <button id="btnLogin" class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-    <p class="mt-5 mb-3 text-muted">© 2017-2018</p>
   </form>
 
 </body >

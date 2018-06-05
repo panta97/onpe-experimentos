@@ -1,5 +1,7 @@
 package com.onpe.controller;
 
+import java.util.List;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +21,8 @@ import com.onpe.service.UsuarioService;
 @RequestMapping("/signup")
 public class SignupController {
 	
+    public static final String REDIRECT_SAME_PAGE = "redirect:/signup";
+	
 	@Autowired
 	private UsuarioService usuarioService;
 	
@@ -35,11 +39,19 @@ public class SignupController {
 	public String save(@Valid Usuario usuario, BindingResult result, Model model, RedirectAttributes redirect) {
 		try {
 			
-			if (usuario.getNombre().length() <= 0 || usuario.getPassword().length() <= 0) {
-				redirect.addFlashAttribute("objResult", true);
-				redirect.addFlashAttribute("resultado", "Campo(s) incompleto(s)");
-				
-				return "redirect:/signup";
+			if (usuario.getNombre().length() <= 0 || usuario.getPassword().length() <= 0 || usuario.getApellido().length() <= 0) {
+				loadRedirect("Campo(s) incompleto(s)", redirect);
+				return REDIRECT_SAME_PAGE;
+			}
+			
+			if (!usuario.getPassword().equals(usuario.getApellido())) {
+				loadRedirect("Contrasenias no coinciden", redirect);
+				return REDIRECT_SAME_PAGE;
+			}
+			
+			if (!isUserUnique(usuario)) {
+				loadRedirect("Nombre de usuario ya existe", redirect);
+				return REDIRECT_SAME_PAGE;
 			}
 			
 			
@@ -52,8 +64,7 @@ public class SignupController {
 			
 			usuarioService.save(usuario);
 			
-			redirect.addFlashAttribute("objResult", true);
-			redirect.addFlashAttribute("resultado", "nuevo usuario creado");
+			loadRedirect("nuevo usuario creado", redirect);
 			
 			return "redirect:/login";
 			
@@ -64,6 +75,21 @@ public class SignupController {
 		}
 	}
 	
+	private boolean isUserUnique(Usuario user) {
+		List<Usuario> users = usuarioService.findAll();
+		
+		for (Usuario existingUser : users) {
+			if (user.getNombre().equals(existingUser.getNombre())) {
+				return false;
+			}
+		}
+		
+		return true;	
+	}
 	
-
+	private void loadRedirect(String customMessage, RedirectAttributes redirect) {
+		redirect.addFlashAttribute("objResult", true);
+		redirect.addFlashAttribute("resultado", customMessage);
+	}
+	
 }

@@ -14,8 +14,8 @@
 	<input type="hidden" name="${_csrf.parameterName}"
 						value="${_csrf.token}" />
     <h1 class="h3 mb-3 font-weight-normal">Please login</h1>
-    <input type="text" id="user" name="user" class="form-control" placeholder="username" required="" autofocus=""/>
-    <input type="password" id="password" name="password" class="form-control" placeholder="password" required=""/>
+    <input type="text" id="user" name="user" class="form-control" placeholder="username" autofocus=""/>
+    <input type="password" id="password" name="password" class="form-control" placeholder="password" />
     <div class="checkbox mb-3">
     </div>
     <div id="message" style="text-align: center;" th:if="${objResult} == true">

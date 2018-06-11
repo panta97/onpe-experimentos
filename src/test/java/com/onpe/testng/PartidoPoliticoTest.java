@@ -3,6 +3,7 @@ package com.onpe.testng;
 import org.testng.annotations.Test;
 
 import com.onpe.OnpeApplication;
+import com.onpe.entity.Distrito;
 import com.onpe.entity.PartidoPolitico;
 import com.onpe.service.PartidoPoliticoService;
 
@@ -71,6 +72,56 @@ public class PartidoPoliticoTest extends AbstractTestNGSpringContextTests{
 		// TODO: handle exception
 		e.printStackTrace();
 		Assert.fail("Mensaje: " + e.getMessage());
+	}
+  }
+  
+//Read method
+  @Test (dependsOnMethods = {"addPartidoPolitico"})
+  public void readPartidoPolitico() {
+	  try {
+		  System.out.println("Met. leer");
+		  
+		  PartidoPolitico partidoPoliticoRetrieve = new PartidoPolitico();
+		  partidoPoliticoRetrieve = partidoPoliticoService.findById(partidoPolitico.getId());
+		  
+		  Assert.assertEquals(partidoPoliticoRetrieve.getId(), partidoPolitico.getId());
+		
+	} catch (Exception e) {
+		// TODO: handle exception
+		e.printStackTrace();
+		Assert.fail();
+	}
+  }
+  
+  
+  //Update method
+  @Test (dependsOnMethods = {"addPartidoPolitico"})
+  public void updatePartidoPolitico() {
+	  try {
+		  System.out.println("Met. Editar");
+		  String newName= "LIMA";
+		  partidoPoliticoService.udpate(partidoPolitico.getId(), newName);
+		  Assert.assertEquals(partidoPoliticoService.findById(partidoPolitico.getId()).getNombre(), newName);
+		
+	} catch (Exception e) {
+		// TODO: handle exception
+		e.printStackTrace();
+		Assert.fail();
+	}
+  }
+  
+  
+  //Delete method
+  @Test (dependsOnMethods = {"updatePartidoPolitico"})
+  public void deletePartidoPolitico() {
+	  try {
+		  System.out.println("Met. Eliminar");
+		  partidoPoliticoService.delete(partidoPolitico.getId());
+		  Assert.assertTrue(true);
+		  		
+	} catch (Exception e) {
+		e.printStackTrace();
+		Assert.fail();
 	}
   }
 

@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\Operador\AppData\Local\Temp\testng-eclipse--873198989\testng-customsuite.xml</span>
+                    <span>C:\Users\Operador\AppData\Local\Temp\testng-eclipse--684705442\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">4 methods,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,6 +103,21 @@
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.onpe.testng.PartidoPoliticoTest" hash-for-method="addPartidoPolitico(PPK, ACT)">addPartidoPolitico(PPK, ACT)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.onpe.testng.PartidoPoliticoTest" hash-for-method="deletePartidoPolitico">deletePartidoPolitico</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.onpe.testng.PartidoPoliticoTest" hash-for-method="readPartidoPolitico">readPartidoPolitico</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.onpe.testng.PartidoPoliticoTest" hash-for-method="updatePartidoPolitico">updatePartidoPolitico</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -131,12 +146,33 @@
                   <span class="parameters">(PPK, ACT)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="deletePartidoPolitico">
+                  </a> <!-- deletePartidoPolitico -->
+                  <span class="method-name">deletePartidoPolitico</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="readPartidoPolitico">
+                  </a> <!-- readPartidoPolitico -->
+                  <span class="method-name">readPartidoPolitico</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="updatePartidoPolitico">
+                  </a> <!-- updatePartidoPolitico -->
+                  <span class="method-name">updatePartidoPolitico</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Default_suite-class-passed -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Operador\AppData\Local\Temp\testng-eclipse--873198989\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Operador\AppData\Local\Temp\testng-eclipse--684705442\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -185,16 +221,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'addPartidoPolitico')
 data.setCell(0, 2, 'com.onpe.testng.PartidoPoliticoTest')
-data.setCell(0, 3, 343);
+data.setCell(0, 3, 390);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'updatePartidoPolitico')
+data.setCell(1, 2, 'com.onpe.testng.PartidoPoliticoTest')
+data.setCell(1, 3, 78);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'readPartidoPolitico')
+data.setCell(2, 2, 'com.onpe.testng.PartidoPoliticoTest')
+data.setCell(2, 3, 66);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'deletePartidoPolitico')
+data.setCell(3, 2, 'com.onpe.testng.PartidoPoliticoTest')
+data.setCell(3, 3, 16);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 343 ms</span>
+              <span class="suite-total-time">Total running time: 550 ms</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -227,39 +275,99 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="configuration-class before">
                 <span class="method-name">springTestContextPrepareTestInstance</span>
-                <span class="method-start">16 ms</span>
+                <span class="method-start">31 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-class before">
                 <span class="method-name">beforeClass</span>
-                <span class="method-start">10025 ms</span>
+                <span class="method-start">9755 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">addPartidoPolitico(PPK, ACT)</span>
-                <span class="method-start">10041 ms</span>
+                <span class="method-start">9770 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">10041 ms</span>
+                <span class="method-start">9770 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">springTestContextBeforeTestMethod(public void com.onpe.testng.PartidoPoliticoTest.addPartidoPolitico(java.lang.String,java.lang.String...)</span>
-                <span class="method-start">10041 ms</span>
+                <span class="method-start">9770 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">10176 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">10176 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">readPartidoPolitico</span>
+                <span class="method-start">10176 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">springTestContextAfterTestMethod(public void com.onpe.testng.PartidoPoliticoTest.addPartidoPolitico(java.lang.String,java.lang.String...)</span>
+                <span class="method-start">10176 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">springTestContextBeforeTestMethod(public void com.onpe.testng.PartidoPoliticoTest.readPartidoPolitico())</span>
+                <span class="method-start">10176 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">10242 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">10242 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">springTestContextAfterTestMethod(public void com.onpe.testng.PartidoPoliticoTest.readPartidoPolitico())</span>
+                <span class="method-start">10242 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">springTestContextBeforeTestMethod(public void com.onpe.testng.PartidoPoliticoTest.updatePartidoPolitico())</span>
+                <span class="method-start">10242 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">updatePartidoPolitico</span>
+                <span class="method-start">10242 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">10320 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">10320 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">deletePartidoPolitico</span>
+                <span class="method-start">10320 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">springTestContextAfterTestMethod(public void com.onpe.testng.PartidoPoliticoTest.updatePartidoPolitico())</span>
+                <span class="method-start">10320 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">springTestContextBeforeTestMethod(public void com.onpe.testng.PartidoPoliticoTest.deletePartidoPolitico())</span>
+                <span class="method-start">10320 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-class after">
                 <span class="method-name">afterClass</span>
-                <span class="method-start">10384 ms</span>
+                <span class="method-start">10352 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">10384 ms</span>
+                <span class="method-start">10352 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">springTestContextAfterTestClass</span>
-                <span class="method-start">10384 ms</span>
+                <span class="method-start">10352 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-method after">
-                <span class="method-name">springTestContextAfterTestMethod(public void com.onpe.testng.PartidoPoliticoTest.addPartidoPolitico(java.lang.String,java.lang.String...)</span>
-                <span class="method-start">10384 ms</span>
+                <span class="method-name">springTestContextAfterTestMethod(public void com.onpe.testng.PartidoPoliticoTest.deletePartidoPolitico())</span>
+                <span class="method-start">10352 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

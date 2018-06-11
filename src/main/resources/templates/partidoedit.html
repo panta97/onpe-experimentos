@@ -16,7 +16,7 @@
     		
           <div class="mb-3">
             <label for="nombre">Nombre</label>
-            <input type="text" class="form-control" id="nombre" placeholder="mi partido" required=""
+            <input type="text" class="form-control" id="nombre" placeholder="mi partido"
             th:field="*{nombre}"/>
             <div class="invalid-feedback">
               Please provide a valid state.
@@ -25,7 +25,7 @@
 
           <div class="mb-3">
               <label for="state">Estado</label>
-              <select class="custom-select d-block w-100" id="state" required=""
+              <select class="custom-select d-block w-100" id="estadoSelect"
               th:field="*{estado}">
                 <option th:each="e:${estado}" th:value="${e}" th:text="${e}"></option>
               </select>
@@ -34,7 +34,12 @@
               </div>
             </div>
       
-          <hr class="mb-4"/>
+          <hr class="mb-4"/>         
+          <div id="message" style="text-align: center;" th:if="${objResult} == true">
+  <div class="alert alert-danger" role="alert">
+      <span th:text="${resultado}"></span>
+  </div>
+</div>
           <button id="btnActualizar" class="btn btn-success btn-md" type="submit">Actualizar</button>
         </form>
       </div>

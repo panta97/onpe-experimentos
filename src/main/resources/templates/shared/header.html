@@ -4,13 +4,13 @@
 <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
     <h5 class="my-0 mr-md-auto font-weight-normal">Onpe</h5>
     <nav class="my-2 my-md-0 mr-md-3">
-      <a id="aPartidos" class="p-2 text-dark" href="/OnpeWeb/partido/list">Partidos</a>
-      <a id="aDistritos" class="p-2 text-dark" href="/OnpeWeb/distrito/list">Distritos</a>
-      <a id="aCandidatos" class="p-2 text-dark" href="/OnpeWeb/candidato/list">Candidatos</a>
+      <a id="btnPartido" class="p-2 text-dark" href="/OnpeWeb/partido/list">Partidos</a>
+      <a id="btnDistrito" class="p-2 text-dark" href="/OnpeWeb/distrito/list">Distritos</a>
+      <a id="btnCandidato" class="p-2 text-dark" href="/OnpeWeb/candidato/list">Candidatos</a>
     </nav>
    
     <form th:action="@{/logout}" method="POST">
-     <button type="submit" class="btn btn-outline-danger">Log out</button>
+     <button id="btnLogout" type="submit" class="btn btn-outline-danger">Log out</button>
     </form>
 
 </div>

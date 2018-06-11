@@ -59,21 +59,13 @@ public class UsuarioService implements UserDetailsService, IUsuarioService{
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		
-		System.out.println("BELOWWWWW");
-		System.out.println(username.toString());
-				
 		Usuario usuario = usuarioRepository.findByNombre(username);
 		
-		if (usuario == null) {
-			
-			System.out.println("-----------NULLLLLLL-------");
-			
+		if (usuario == null) {			
 			throw new UsernameNotFoundException("No user found with:" + username);
-			
 		}
 		
 		return buildUser(usuario);
-		
 	}
 	
 	private User buildUser(Usuario usuario) {

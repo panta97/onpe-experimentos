@@ -13,14 +13,20 @@
 		
 		
     <h1 class="h3 mb-3 font-weight-normal">Sign up</h1>
-    <input type="text" id="inputUser" class="form-control" placeholder="Email address" required="" autofocus=""
+    <input type="text" id="inputUser" class="form-control" placeholder="username" autofocus=""
     	th:field="*{nombre}"/>
-    <input type="password" id="inputPassword" class="form-control password" placeholder="Password" required=""
+    <input type="password" id="inputPassword" class="form-control password" placeholder="Password"
     	th:field="*{password}"/>    
-    <input type="password" id="inputPasswordConfirm" class="form-control confirm-password" placeholder="Confirm Password" required=""/>
-
+    <input type="password" id="inputPasswordConfirm" class="form-control confirm-password" placeholder="Confirm Password"
+    	th:field="*{apellido}"/>
+              <div id="message" style="text-align: center;" th:if="${objResult} == true">
+        <div class="alert alert-danger" role="alert">
+            <span th:text="${resultado}"></span>
+        </div>
+      </div>   
     <button class="btn btn-lg btn-primary btn-block btnSignUp" type="submit">Registrarme</button>
-    <p class="mt-5 mb-3 text-muted">© 2017-2018</p>
+    
+ 
   </form>
 
 </body>

@@ -16,7 +16,7 @@ public class DistritoService implements IDistritoService{
 
 	//CREATE
 	@Override
-	public Distrito save(Distrito distrito) {
+	public Distrito save(Distrito distrito)  {
 		return distritoRepository.save(distrito);
 	}
 	

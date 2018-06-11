@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="Suite" parallel="false">
-  <test name="Test">
+<suite name="TestAll" parallel="false">
+  <test name="DistritoTest" enabled="false">
     <classes>
       <class name="pe.com.testng.DistritoTest"/>
     </classes>
+  <test>
+    <classes>
+      <class name= "pe.com.testng.PartidoPoliticoTest"/>
+    </classes>   
+  </test>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

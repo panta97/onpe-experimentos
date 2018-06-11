@@ -53,8 +53,8 @@ public class DistritoTest {
 			
 			//Datos de Entrada
 			distrito = new Distrito();
-			distrito.setNombre("LIMA");
-			distrito.setEstado("ACT");
+			distrito.setNombre("SAN MIGUEL");
+			distrito.setEstado("DCT");
 						
 			//Ejecutar Prueba
 			distritoService.save(distrito);
@@ -120,7 +120,6 @@ public class DistritoTest {
 			Assert.fail();
 		}
 	}
-	
 	
 	@Test
 	public void d_eliminar() {

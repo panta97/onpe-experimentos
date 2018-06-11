@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="10416" started-at="2018-06-11T01:38:57Z" finished-at="2018-06-11T01:39:07Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="10416" started-at="2018-06-11T01:38:57Z" finished-at="2018-06-11T01:39:07Z">
+      <class name="com.onpe.testng.PartidoPoliticoTest">
+        <test-method status="PASS" signature="springTestContextBeforeTestClass()[pri:0, instance:com.onpe.testng.PartidoPoliticoTest@11dc3715]" name="springTestContextBeforeTestClass" is-config="true" duration-ms="16" started-at="2018-06-10T20:38:57Z" finished-at="2018-06-10T20:38:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestClass -->
+        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:com.onpe.testng.PartidoPoliticoTest@11dc3715]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="10009" started-at="2018-06-10T20:38:57Z" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" finished-at="2018-06-10T20:39:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextPrepareTestInstance -->
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.onpe.testng.PartidoPoliticoTest@11dc3715]" name="beforeClass" is-config="true" duration-ms="0" started-at="2018-06-10T20:39:07Z" finished-at="2018-06-10T20:39:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.onpe.testng.PartidoPoliticoTest@11dc3715]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2018-06-10T20:39:07Z" finished-at="2018-06-10T20:39:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.onpe.testng.PartidoPoliticoTest@11dc3715]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2018-06-10T20:39:07Z" finished-at="2018-06-10T20:39:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.onpe.testng.PartidoPoliticoTest.addPartidoPolitico(java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="addPartidoPolitico(java.lang.String, java.lang.String)[pri:0, instance:com.onpe.testng.PartidoPoliticoTest@11dc3715]" name="addPartidoPolitico" duration-ms="343" started-at="2018-06-10T20:39:07Z" data-provider="datosDePartidoPolitico" finished-at="2018-06-10T20:39:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[PPK]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ACT]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addPartidoPolitico -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.onpe.testng.PartidoPoliticoTest@11dc3715]" name="afterMethod" is-config="true" duration-ms="0" started-at="2018-06-10T20:39:07Z" finished-at="2018-06-10T20:39:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.onpe.testng.PartidoPoliticoTest@11dc3715]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2018-06-10T20:39:07Z" finished-at="2018-06-10T20:39:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.onpe.testng.PartidoPoliticoTest.addPartidoPolitico(java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="springTestContextAfterTestClass()[pri:0, instance:com.onpe.testng.PartidoPoliticoTest@11dc3715]" name="springTestContextAfterTestClass" is-config="true" duration-ms="16" started-at="2018-06-10T20:39:07Z" finished-at="2018-06-10T20:39:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestClass -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.onpe.testng.PartidoPoliticoTest@11dc3715]" name="afterClass" is-config="true" duration-ms="0" started-at="2018-06-10T20:39:07Z" finished-at="2018-06-10T20:39:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.onpe.testng.PartidoPoliticoTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

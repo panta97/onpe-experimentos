@@ -3,7 +3,6 @@ package com.onpe.testng;
 import org.testng.annotations.Test;
 
 import com.onpe.OnpeApplication;
-import com.onpe.bean.DistritoBean;
 import com.onpe.entity.Distrito;
 import com.onpe.service.DistritoService;
 
@@ -18,7 +17,6 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.testng.annotations.AfterClass;
 
@@ -91,8 +89,9 @@ public class DistritoTest extends AbstractTestNGSpringContextTests{
 		  System.out.println("Met. leer");
 		  
 		  Distrito distritoRetrieve = new Distrito();
+		//Ejecutar Prueba
 		  distritoRetrieve = distritoService.findById(distrito.getId());
-		  
+		//Validar la prueba
 		  Assert.assertEquals(distritoRetrieve.getId(), distrito.getId());
 		
 	} catch (Exception e) {
@@ -108,8 +107,11 @@ public class DistritoTest extends AbstractTestNGSpringContextTests{
   public void updateDistrito() {
 	  try {
 		  System.out.println("Met. Editar");
+		//Datos de Entrada
 		  String newName= "LIMA";
+		//Ejecutar Prueba
 		  distritoService.update(distrito.getId(), newName);
+		//Validar la prueba
 		  Assert.assertEquals(distritoService.findById(distrito.getId()).getNombre(), newName);
 		
 	} catch (Exception e) {
@@ -125,7 +127,9 @@ public class DistritoTest extends AbstractTestNGSpringContextTests{
   public void deleteDistrito() {
 	  try {
 		  System.out.println("Met. Eliminar");
+		//Ejecutar Prueba
 		  distritoService.delete(distrito.getId());
+		//Validar la prueba
 		  Assert.assertTrue(true);
 		  		
 	} catch (Exception e) {

@@ -1,29 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+<testng-results skipped="0" failed="0" ignored="0" total="12" passed="12">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="10352" started-at="2018-06-11T01:50:48Z" finished-at="2018-06-11T01:50:59Z">
+  <suite name="Default suite" duration-ms="14917" started-at="2018-06-11T02:34:26Z" finished-at="2018-06-11T02:34:41Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="10352" started-at="2018-06-11T01:50:48Z" finished-at="2018-06-11T01:50:59Z">
+    <test name="Default test" duration-ms="14917" started-at="2018-06-11T02:34:26Z" finished-at="2018-06-11T02:34:41Z">
       <class name="com.onpe.testng.PartidoPoliticoTest">
-        <test-method status="PASS" signature="springTestContextBeforeTestClass()[pri:0, instance:com.onpe.testng.PartidoPoliticoTest@d83da2e]" name="springTestContextBeforeTestClass" is-config="true" duration-ms="31" started-at="2018-06-10T20:50:48Z" finished-at="2018-06-10T20:50:48Z">
+        <test-method status="PASS" signature="springTestContextBeforeTestClass()[pri:0, instance:com.onpe.testng.PartidoPoliticoTest@14d3bc22]" name="springTestContextBeforeTestClass" is-config="true" duration-ms="31" started-at="2018-06-10T21:34:26Z" finished-at="2018-06-10T21:34:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestClass -->
-        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:com.onpe.testng.PartidoPoliticoTest@d83da2e]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="9724" started-at="2018-06-10T20:50:48Z" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" finished-at="2018-06-10T20:50:58Z">
+        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:com.onpe.testng.PartidoPoliticoTest@14d3bc22]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="14135" started-at="2018-06-10T21:34:26Z" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" finished-at="2018-06-10T21:34:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextPrepareTestInstance -->
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.onpe.testng.PartidoPoliticoTest@d83da2e]" name="beforeClass" is-config="true" duration-ms="0" started-at="2018-06-10T20:50:58Z" finished-at="2018-06-10T20:50:58Z">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.onpe.testng.PartidoPoliticoTest@14d3bc22]" name="beforeClass" is-config="true" duration-ms="16" started-at="2018-06-10T21:34:40Z" finished-at="2018-06-10T21:34:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.onpe.testng.PartidoPoliticoTest@d83da2e]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2018-06-10T20:50:58Z" finished-at="2018-06-10T20:50:58Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.onpe.testng.PartidoPoliticoTest@d83da2e]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2018-06-10T20:50:58Z" finished-at="2018-06-10T20:50:58Z">
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.onpe.testng.PartidoPoliticoTest@14d3bc22]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="15" started-at="2018-06-10T21:34:40Z" finished-at="2018-06-10T21:34:40Z">
           <params>
             <param index="0">
               <value>
@@ -34,7 +30,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="addPartidoPolitico(java.lang.String, java.lang.String)[pri:0, instance:com.onpe.testng.PartidoPoliticoTest@d83da2e]" name="addPartidoPolitico" duration-ms="390" started-at="2018-06-10T20:50:58Z" data-provider="datosDePartidoPolitico" finished-at="2018-06-10T20:50:59Z">
+        <test-method status="PASS" signature="addPartidoPolitico(java.lang.String, java.lang.String)[pri:0, instance:com.onpe.testng.PartidoPoliticoTest@14d3bc22]" name="addPartidoPolitico" duration-ms="250" started-at="2018-06-10T21:34:40Z" data-provider="datosDePartidoPolitico" finished-at="2018-06-10T21:34:40Z">
           <params>
             <param index="0">
               <value>
@@ -50,26 +46,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addPartidoPolitico -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.onpe.testng.PartidoPoliticoTest@d83da2e]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2018-06-10T20:50:59Z" finished-at="2018-06-10T20:50:59Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.onpe.testng.PartidoPoliticoTest@14d3bc22]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2018-06-10T21:34:40Z" finished-at="2018-06-10T21:34:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.onpe.testng.PartidoPoliticoTest@d83da2e]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2018-06-10T20:50:59Z" finished-at="2018-06-10T20:50:59Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.onpe.testng.PartidoPoliticoTest.readPartidoPolitico()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="readPartidoPolitico()[pri:0, instance:com.onpe.testng.PartidoPoliticoTest@d83da2e]" name="readPartidoPolitico" duration-ms="66" started-at="2018-06-10T20:50:59Z" depends-on-methods="com.onpe.testng.PartidoPoliticoTest.addPartidoPolitico" finished-at="2018-06-10T20:50:59Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- readPartidoPolitico -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.onpe.testng.PartidoPoliticoTest@d83da2e]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2018-06-10T20:50:59Z" finished-at="2018-06-10T20:50:59Z">
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.onpe.testng.PartidoPoliticoTest@14d3bc22]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="16" started-at="2018-06-10T21:34:40Z" finished-at="2018-06-10T21:34:40Z">
           <params>
             <param index="0">
               <value>
@@ -80,26 +61,42 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.onpe.testng.PartidoPoliticoTest@d83da2e]" name="afterMethod" is-config="true" duration-ms="0" started-at="2018-06-10T20:50:59Z" finished-at="2018-06-10T20:50:59Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.onpe.testng.PartidoPoliticoTest@14d3bc22]" name="afterMethod" is-config="true" duration-ms="0" started-at="2018-06-10T21:34:40Z" finished-at="2018-06-10T21:34:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.onpe.testng.PartidoPoliticoTest@d83da2e]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2018-06-10T20:50:59Z" finished-at="2018-06-10T20:50:59Z">
+        <test-method status="PASS" signature="readPartidoPolitico()[pri:0, instance:com.onpe.testng.PartidoPoliticoTest@14d3bc22]" name="readPartidoPolitico" duration-ms="46" started-at="2018-06-10T21:34:40Z" depends-on-methods="com.onpe.testng.PartidoPoliticoTest.addPartidoPolitico" finished-at="2018-06-10T21:34:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- readPartidoPolitico -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.onpe.testng.PartidoPoliticoTest@14d3bc22]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2018-06-10T21:34:40Z" finished-at="2018-06-10T21:34:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.onpe.testng.PartidoPoliticoTest@d83da2e]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2018-06-10T20:50:59Z" finished-at="2018-06-10T20:50:59Z">
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.onpe.testng.PartidoPoliticoTest@14d3bc22]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2018-06-10T21:34:40Z" finished-at="2018-06-10T21:34:40Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.onpe.testng.PartidoPoliticoTest.updatePartidoPolitico()]]>
+                <![CDATA[public void com.onpe.testng.PartidoPoliticoTest.readPartidoPolitico()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.onpe.testng.PartidoPoliticoTest@d83da2e]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2018-06-10T20:50:59Z" finished-at="2018-06-10T20:50:59Z">
+        <test-method status="PASS" signature="updatePartidoPolitico()[pri:0, instance:com.onpe.testng.PartidoPoliticoTest@14d3bc22]" name="updatePartidoPolitico" duration-ms="66" started-at="2018-06-10T21:34:40Z" depends-on-methods="com.onpe.testng.PartidoPoliticoTest.addPartidoPolitico" finished-at="2018-06-10T21:34:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updatePartidoPolitico -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.onpe.testng.PartidoPoliticoTest@14d3bc22]" name="afterMethod" is-config="true" duration-ms="0" started-at="2018-06-10T21:34:40Z" finished-at="2018-06-10T21:34:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.onpe.testng.PartidoPoliticoTest@14d3bc22]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2018-06-10T21:34:40Z" finished-at="2018-06-10T21:34:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.onpe.testng.PartidoPoliticoTest@14d3bc22]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2018-06-10T21:34:40Z" finished-at="2018-06-10T21:34:40Z">
           <params>
             <param index="0">
               <value>
@@ -110,34 +107,18 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.onpe.testng.PartidoPoliticoTest@d83da2e]" name="afterMethod" is-config="true" duration-ms="0" started-at="2018-06-10T20:50:59Z" finished-at="2018-06-10T20:50:59Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="updatePartidoPolitico()[pri:0, instance:com.onpe.testng.PartidoPoliticoTest@d83da2e]" name="updatePartidoPolitico" duration-ms="78" started-at="2018-06-10T20:50:59Z" depends-on-methods="com.onpe.testng.PartidoPoliticoTest.addPartidoPolitico" finished-at="2018-06-10T20:50:59Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- updatePartidoPolitico -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.onpe.testng.PartidoPoliticoTest@d83da2e]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2018-06-10T20:50:59Z" finished-at="2018-06-10T20:50:59Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.onpe.testng.PartidoPoliticoTest@d83da2e]" name="afterMethod" is-config="true" duration-ms="0" started-at="2018-06-10T20:50:59Z" finished-at="2018-06-10T20:50:59Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.onpe.testng.PartidoPoliticoTest@d83da2e]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2018-06-10T20:50:59Z" finished-at="2018-06-10T20:50:59Z">
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.onpe.testng.PartidoPoliticoTest@14d3bc22]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2018-06-10T21:34:40Z" finished-at="2018-06-10T21:34:40Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.onpe.testng.PartidoPoliticoTest.deletePartidoPolitico()]]>
+                <![CDATA[public void com.onpe.testng.PartidoPoliticoTest.updatePartidoPolitico()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.onpe.testng.PartidoPoliticoTest@d83da2e]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2018-06-10T20:50:59Z" finished-at="2018-06-10T20:50:59Z">
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.onpe.testng.PartidoPoliticoTest@14d3bc22]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="15" started-at="2018-06-10T21:34:40Z" finished-at="2018-06-10T21:34:40Z">
           <params>
             <param index="0">
               <value>
@@ -148,11 +129,38 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="deletePartidoPolitico()[pri:0, instance:com.onpe.testng.PartidoPoliticoTest@d83da2e]" name="deletePartidoPolitico" duration-ms="16" started-at="2018-06-10T20:50:59Z" depends-on-methods="com.onpe.testng.PartidoPoliticoTest.updatePartidoPolitico" finished-at="2018-06-10T20:50:59Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.onpe.testng.PartidoPoliticoTest@14d3bc22]" name="afterMethod" is-config="true" duration-ms="0" started-at="2018-06-10T21:34:40Z" finished-at="2018-06-10T21:34:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="deletePartidoPolitico()[pri:0, instance:com.onpe.testng.PartidoPoliticoTest@14d3bc22]" name="deletePartidoPolitico" duration-ms="0" started-at="2018-06-10T21:34:40Z" depends-on-methods="com.onpe.testng.PartidoPoliticoTest.updatePartidoPolitico" finished-at="2018-06-10T21:34:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deletePartidoPolitico -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.onpe.testng.PartidoPoliticoTest@d83da2e]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2018-06-10T20:50:59Z" finished-at="2018-06-10T20:50:59Z">
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.onpe.testng.PartidoPoliticoTest@14d3bc22]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2018-06-10T21:34:40Z" finished-at="2018-06-10T21:34:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.onpe.testng.PartidoPoliticoTest.deletePartidoPolitico()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.onpe.testng.PartidoPoliticoTest@14d3bc22]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2018-06-10T21:34:40Z" finished-at="2018-06-10T21:34:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.onpe.testng.PartidoPoliticoTest@14d3bc22]" name="afterMethod" is-config="true" duration-ms="0" started-at="2018-06-10T21:34:40Z" finished-at="2018-06-10T21:34:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.onpe.testng.PartidoPoliticoTest@14d3bc22]" name="afterClass" is-config="true" duration-ms="16" started-at="2018-06-10T21:34:40Z" finished-at="2018-06-10T21:34:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.onpe.testng.PartidoPoliticoTest@14d3bc22]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2018-06-10T21:34:40Z" finished-at="2018-06-10T21:34:40Z">
           <params>
             <param index="0">
               <value>
@@ -163,19 +171,371 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.onpe.testng.PartidoPoliticoTest@d83da2e]" name="afterClass" is-config="true" duration-ms="0" started-at="2018-06-10T20:50:59Z" finished-at="2018-06-10T20:50:59Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.onpe.testng.PartidoPoliticoTest@d83da2e]" name="afterMethod" is-config="true" duration-ms="0" started-at="2018-06-10T20:50:59Z" finished-at="2018-06-10T20:50:59Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="springTestContextAfterTestClass()[pri:0, instance:com.onpe.testng.PartidoPoliticoTest@d83da2e]" name="springTestContextAfterTestClass" is-config="true" duration-ms="0" started-at="2018-06-10T20:50:59Z" finished-at="2018-06-10T20:50:59Z">
+        <test-method status="PASS" signature="springTestContextAfterTestClass()[pri:0, instance:com.onpe.testng.PartidoPoliticoTest@14d3bc22]" name="springTestContextAfterTestClass" is-config="true" duration-ms="0" started-at="2018-06-10T21:34:40Z" finished-at="2018-06-10T21:34:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestClass -->
       </class> <!-- com.onpe.testng.PartidoPoliticoTest -->
+      <class name="com.onpe.testng.UsuarioTest">
+        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:com.onpe.testng.UsuarioTest@7b227d8d]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="0" started-at="2018-06-10T21:34:40Z" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" finished-at="2018-06-10T21:34:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextPrepareTestInstance -->
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.onpe.testng.UsuarioTest@7b227d8d]" name="beforeClass" is-config="true" duration-ms="0" started-at="2018-06-10T21:34:40Z" finished-at="2018-06-10T21:34:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.onpe.testng.UsuarioTest@7b227d8d]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2018-06-10T21:34:40Z" finished-at="2018-06-10T21:34:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.onpe.testng.UsuarioTest@7b227d8d]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2018-06-10T21:34:40Z" finished-at="2018-06-10T21:34:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.onpe.testng.UsuarioTest.addUsuario(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="addUsuario(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.onpe.testng.UsuarioTest@7b227d8d]" name="addUsuario" duration-ms="78" started-at="2018-06-10T21:34:40Z" data-provider="datosDeUsuario" finished-at="2018-06-10T21:34:41Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Kevin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Tito]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[CS02]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[123]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[ACT]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[ADMIN]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addUsuario -->
+        <test-method status="PASS" signature="springTestContextBeforeTestClass()[pri:0, instance:com.onpe.testng.UsuarioTest@7b227d8d]" name="springTestContextBeforeTestClass" is-config="true" duration-ms="0" started-at="2018-06-10T21:34:40Z" finished-at="2018-06-10T21:34:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestClass -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.onpe.testng.UsuarioTest@7b227d8d]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2018-06-10T21:34:41Z" finished-at="2018-06-10T21:34:41Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.onpe.testng.UsuarioTest.addUsuario(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.onpe.testng.UsuarioTest@7b227d8d]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2018-06-10T21:34:41Z" finished-at="2018-06-10T21:34:41Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.onpe.testng.UsuarioTest.readUsuario()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.onpe.testng.UsuarioTest@7b227d8d]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2018-06-10T21:34:41Z" finished-at="2018-06-10T21:34:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.onpe.testng.UsuarioTest@7b227d8d]" name="afterMethod" is-config="true" duration-ms="0" started-at="2018-06-10T21:34:41Z" finished-at="2018-06-10T21:34:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="readUsuario()[pri:0, instance:com.onpe.testng.UsuarioTest@7b227d8d]" name="readUsuario" duration-ms="16" started-at="2018-06-10T21:34:41Z" depends-on-methods="com.onpe.testng.UsuarioTest.addUsuario" finished-at="2018-06-10T21:34:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- readUsuario -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.onpe.testng.UsuarioTest@7b227d8d]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2018-06-10T21:34:41Z" finished-at="2018-06-10T21:34:41Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.onpe.testng.UsuarioTest.readUsuario()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.onpe.testng.UsuarioTest@7b227d8d]" name="afterMethod" is-config="true" duration-ms="0" started-at="2018-06-10T21:34:41Z" finished-at="2018-06-10T21:34:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.onpe.testng.UsuarioTest@7b227d8d]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2018-06-10T21:34:41Z" finished-at="2018-06-10T21:34:41Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.onpe.testng.UsuarioTest.updateUsuario()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.onpe.testng.UsuarioTest@7b227d8d]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2018-06-10T21:34:41Z" finished-at="2018-06-10T21:34:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="updateUsuario()[pri:0, instance:com.onpe.testng.UsuarioTest@7b227d8d]" name="updateUsuario" duration-ms="31" started-at="2018-06-10T21:34:41Z" depends-on-methods="com.onpe.testng.UsuarioTest.addUsuario" finished-at="2018-06-10T21:34:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateUsuario -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.onpe.testng.UsuarioTest@7b227d8d]" name="afterMethod" is-config="true" duration-ms="0" started-at="2018-06-10T21:34:41Z" finished-at="2018-06-10T21:34:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.onpe.testng.UsuarioTest@7b227d8d]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="15" started-at="2018-06-10T21:34:41Z" finished-at="2018-06-10T21:34:41Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.onpe.testng.UsuarioTest.deleteUsuario()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.onpe.testng.UsuarioTest@7b227d8d]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2018-06-10T21:34:41Z" finished-at="2018-06-10T21:34:41Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.onpe.testng.UsuarioTest.updateUsuario()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="deleteUsuario()[pri:0, instance:com.onpe.testng.UsuarioTest@7b227d8d]" name="deleteUsuario" duration-ms="47" started-at="2018-06-10T21:34:41Z" depends-on-methods="com.onpe.testng.UsuarioTest.updateUsuario" finished-at="2018-06-10T21:34:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteUsuario -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.onpe.testng.UsuarioTest@7b227d8d]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2018-06-10T21:34:41Z" finished-at="2018-06-10T21:34:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="springTestContextAfterTestClass()[pri:0, instance:com.onpe.testng.UsuarioTest@7b227d8d]" name="springTestContextAfterTestClass" is-config="true" duration-ms="0" started-at="2018-06-10T21:34:41Z" finished-at="2018-06-10T21:34:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestClass -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.onpe.testng.UsuarioTest@7b227d8d]" name="afterClass" is-config="true" duration-ms="0" started-at="2018-06-10T21:34:41Z" finished-at="2018-06-10T21:34:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.onpe.testng.UsuarioTest@7b227d8d]" name="afterMethod" is-config="true" duration-ms="0" started-at="2018-06-10T21:34:41Z" finished-at="2018-06-10T21:34:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.onpe.testng.UsuarioTest@7b227d8d]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2018-06-10T21:34:41Z" finished-at="2018-06-10T21:34:41Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.onpe.testng.UsuarioTest.deleteUsuario()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+      </class> <!-- com.onpe.testng.UsuarioTest -->
+      <class name="com.onpe.testng.DistritoTest">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.onpe.testng.DistritoTest@45018215]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2018-06-10T21:34:41Z" finished-at="2018-06-10T21:34:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:com.onpe.testng.DistritoTest@45018215]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="0" started-at="2018-06-10T21:34:41Z" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" finished-at="2018-06-10T21:34:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextPrepareTestInstance -->
+        <test-method status="PASS" signature="addDistrito(java.lang.String, java.lang.String)[pri:0, instance:com.onpe.testng.DistritoTest@45018215]" name="addDistrito" duration-ms="31" started-at="2018-06-10T21:34:41Z" data-provider="datosDeDistrito" finished-at="2018-06-10T21:34:41Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[MAGDALENA]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ACT]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addDistrito -->
+        <test-method status="PASS" signature="springTestContextBeforeTestClass()[pri:0, instance:com.onpe.testng.DistritoTest@45018215]" name="springTestContextBeforeTestClass" is-config="true" duration-ms="0" started-at="2018-06-10T21:34:41Z" finished-at="2018-06-10T21:34:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestClass -->
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.onpe.testng.DistritoTest@45018215]" name="beforeClass" is-config="true" duration-ms="0" started-at="2018-06-10T21:34:41Z" finished-at="2018-06-10T21:34:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.onpe.testng.DistritoTest@45018215]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2018-06-10T21:34:41Z" finished-at="2018-06-10T21:34:41Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.onpe.testng.DistritoTest.addDistrito(java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.onpe.testng.DistritoTest@45018215]" name="afterMethod" is-config="true" duration-ms="0" started-at="2018-06-10T21:34:41Z" finished-at="2018-06-10T21:34:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.onpe.testng.DistritoTest@45018215]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2018-06-10T21:34:41Z" finished-at="2018-06-10T21:34:41Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.onpe.testng.DistritoTest.readDistrito()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.onpe.testng.DistritoTest@45018215]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2018-06-10T21:34:41Z" finished-at="2018-06-10T21:34:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="readDistrito()[pri:0, instance:com.onpe.testng.DistritoTest@45018215]" name="readDistrito" duration-ms="16" started-at="2018-06-10T21:34:41Z" depends-on-methods="com.onpe.testng.DistritoTest.addDistrito" finished-at="2018-06-10T21:34:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- readDistrito -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.onpe.testng.DistritoTest@45018215]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2018-06-10T21:34:41Z" finished-at="2018-06-10T21:34:41Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.onpe.testng.DistritoTest.addDistrito(java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.onpe.testng.DistritoTest@45018215]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2018-06-10T21:34:41Z" finished-at="2018-06-10T21:34:41Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.onpe.testng.DistritoTest.readDistrito()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.onpe.testng.DistritoTest@45018215]" name="afterMethod" is-config="true" duration-ms="0" started-at="2018-06-10T21:34:41Z" finished-at="2018-06-10T21:34:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="updateDistrito()[pri:0, instance:com.onpe.testng.DistritoTest@45018215]" name="updateDistrito" duration-ms="31" started-at="2018-06-10T21:34:41Z" depends-on-methods="com.onpe.testng.DistritoTest.addDistrito" finished-at="2018-06-10T21:34:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateDistrito -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.onpe.testng.DistritoTest@45018215]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2018-06-10T21:34:41Z" finished-at="2018-06-10T21:34:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.onpe.testng.DistritoTest@45018215]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2018-06-10T21:34:41Z" finished-at="2018-06-10T21:34:41Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.onpe.testng.DistritoTest.updateDistrito()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.onpe.testng.DistritoTest@45018215]" name="afterMethod" is-config="true" duration-ms="0" started-at="2018-06-10T21:34:41Z" finished-at="2018-06-10T21:34:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.onpe.testng.DistritoTest@45018215]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2018-06-10T21:34:41Z" finished-at="2018-06-10T21:34:41Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.onpe.testng.DistritoTest.updateDistrito()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="deleteDistrito()[pri:0, instance:com.onpe.testng.DistritoTest@45018215]" name="deleteDistrito" duration-ms="15" started-at="2018-06-10T21:34:41Z" depends-on-methods="com.onpe.testng.DistritoTest.updateDistrito" finished-at="2018-06-10T21:34:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteDistrito -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.onpe.testng.DistritoTest@45018215]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2018-06-10T21:34:41Z" finished-at="2018-06-10T21:34:41Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.onpe.testng.DistritoTest.deleteDistrito()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.onpe.testng.DistritoTest@45018215]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2018-06-10T21:34:41Z" finished-at="2018-06-10T21:34:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.onpe.testng.DistritoTest@45018215]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2018-06-10T21:34:41Z" finished-at="2018-06-10T21:34:41Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.onpe.testng.DistritoTest.deleteDistrito()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.onpe.testng.DistritoTest@45018215]" name="afterClass" is-config="true" duration-ms="0" started-at="2018-06-10T21:34:41Z" finished-at="2018-06-10T21:34:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.onpe.testng.DistritoTest@45018215]" name="afterMethod" is-config="true" duration-ms="0" started-at="2018-06-10T21:34:41Z" finished-at="2018-06-10T21:34:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="springTestContextAfterTestClass()[pri:0, instance:com.onpe.testng.DistritoTest@45018215]" name="springTestContextAfterTestClass" is-config="true" duration-ms="0" started-at="2018-06-10T21:34:41Z" finished-at="2018-06-10T21:34:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestClass -->
+      </class> <!-- com.onpe.testng.DistritoTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

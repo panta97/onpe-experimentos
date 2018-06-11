@@ -3,7 +3,6 @@ package com.onpe.testng;
 import org.testng.annotations.Test;
 
 import com.onpe.OnpeApplication;
-import com.onpe.entity.Distrito;
 import com.onpe.entity.PartidoPolitico;
 import com.onpe.service.PartidoPoliticoService;
 
@@ -80,10 +79,10 @@ public class PartidoPoliticoTest extends AbstractTestNGSpringContextTests{
   public void readPartidoPolitico() {
 	  try {
 		  System.out.println("Met. leer");
-		  
+		//Ejecutar prueba
 		  PartidoPolitico partidoPoliticoRetrieve = new PartidoPolitico();
 		  partidoPoliticoRetrieve = partidoPoliticoService.findById(partidoPolitico.getId());
-		  
+		//Validar prueba
 		  Assert.assertEquals(partidoPoliticoRetrieve.getId(), partidoPolitico.getId());
 		
 	} catch (Exception e) {
@@ -99,8 +98,11 @@ public class PartidoPoliticoTest extends AbstractTestNGSpringContextTests{
   public void updatePartidoPolitico() {
 	  try {
 		  System.out.println("Met. Editar");
+		//Datos de Entrada
 		  String newName= "LIMA";
+		//Ejecutar prueba
 		  partidoPoliticoService.udpate(partidoPolitico.getId(), newName);
+		//Validar prueba
 		  Assert.assertEquals(partidoPoliticoService.findById(partidoPolitico.getId()).getNombre(), newName);
 		
 	} catch (Exception e) {
@@ -116,7 +118,9 @@ public class PartidoPoliticoTest extends AbstractTestNGSpringContextTests{
   public void deletePartidoPolitico() {
 	  try {
 		  System.out.println("Met. Eliminar");
+		//Ejecutar prueba
 		  partidoPoliticoService.delete(partidoPolitico.getId());
+		//Validar prueba
 		  Assert.assertTrue(true);
 		  		
 	} catch (Exception e) {

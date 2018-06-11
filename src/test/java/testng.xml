@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="OnpeTestSuite" parallel="false">
 	<test name="CategoriaTest" enabled="false">
@@ -13,3 +14,23 @@
 		</classes>
 	</test>
 </suite> 
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="TestAll" parallel="false">
+  <test name="DistritoTest" enabled="false">
+    <classes>
+      <class name="pe.com.testng.DistritoTest"/>
+    </classes>
+  </test>
+  <test name="PartidoPoliticoTest" enabled="false">
+    <classes>
+      <class name= "pe.com.testng.PartidoPoliticoTest"/>
+    </classes>   
+  </test>
+  <test name="UsuarioTest">
+    <classes>
+      <class name= "pe.com.testng.UsuarioTest"/>
+    </classes>   
+  </test>
+</suite> <!-- Suite -->
+>>>>>>> test

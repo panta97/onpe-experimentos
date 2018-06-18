@@ -1,36 +1,18 @@
-<<<<<<< HEAD
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="OnpeTestSuite" parallel="false">
-	<test name="CategoriaTest" enabled="false">
-		<parameter name="nombreInsertar" value="Chocolates" />
-		<parameter name="nombreActualizar" value="Lacteos" />
-		<classes>
-			<class name="pe.com.test.CategoriaTest" />
-		</classes>
-	</test>
-	<test name="DistritoWebDriverTest">
-		<classes>
-			<class name="com.onpe.selenium.DistritoWebDriverTest" />
-		</classes>
-	</test>
-</suite> 
-=======
-<?xml version="1.0" encoding="UTF-8"?>
 <suite name="TestAll" parallel="false">
   <test name="DistritoTest" enabled="false">
     <classes>
-      <class name="pe.com.testng.DistritoTest"/>
+      <class name="com.onpe.testng.DistritoTest"/>
     </classes>
   </test>
   <test name="PartidoPoliticoTest" enabled="false">
     <classes>
-      <class name= "pe.com.testng.PartidoPoliticoTest"/>
+      <class name= "com.onpe.testng.PartidoPoliticoTest"/>
     </classes>   
   </test>
   <test name="UsuarioTest">
     <classes>
-      <class name= "pe.com.testng.UsuarioTest"/>
+      <class name= "com.onpe.testng.UsuarioTest"/>
     </classes>   
   </test>
 </suite> <!-- Suite -->
->>>>>>> test

@@ -28,9 +28,16 @@ public final class Utilitario {
 			FileUtils.copyFile(capturaDePantalla, new File(rutaCarpeta + "\\" + nombreArchivo + ".jpg"));
 			// Creamos un archivo txt con el mensaje de error
 			File archivoMensajeError = new File(rutaCarpeta + "\\" + nombreArchivo + ".txt");
-			BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(archivoMensajeError));
-			bufferedWriter.write(mensajeError);
-			bufferedWriter.close();
+			
+			try {
+				BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(archivoMensajeError));
+				bufferedWriter.write(mensajeError);
+				bufferedWriter.close();
+						
+			} catch (Exception e) {
+				e.printStackTrace();
+			}		
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

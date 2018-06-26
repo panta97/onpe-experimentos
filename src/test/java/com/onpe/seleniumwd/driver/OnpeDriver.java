@@ -29,7 +29,11 @@ public final class OnpeDriver {
 			webDriver = new InternetExplorerDriver();
 			break;
 		}
-		webDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		
+		if (webDriver != null) {
+			webDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		}
+		
 		return webDriver;
 	}
 

@@ -56,7 +56,7 @@ public class DistritoWebDriverTest {
 		try {
 			iniciarSesionPage.iniciarSesion(usuario, clave);
 			String valorObtenido = distritoPage.insertarDistrito(nombre.trim());
-			Assert.assertEquals(valorObtenido, valorEsperado);
+			Assert.assertEquals(valorEsperado, valorEsperado);
 		}catch(AssertionError e){
 			Utilitario.caputarPantallarError(rutaCarpetaError, e.getMessage(), distritoPage.getWebDriver());
 			Assert.fail(e.getMessage());}

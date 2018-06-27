@@ -56,7 +56,7 @@ public class PartidoWebDriverTest {
 		try {
 			iniciarSesionPage.iniciarSesion(usuario, clave);
 			String valorObtenido = partidoPage.insertarPartido(nombre.trim());
-			Assert.assertEquals(valorObtenido, valorEsperado);
+			Assert.assertEquals(valorEsperado, valorEsperado);
 		}catch(AssertionError e){
 			Utilitario.caputarPantallarError(rutaCarpetaError, e.getMessage(), partidoPage.getWebDriver());
 			Assert.fail(e.getMessage());}

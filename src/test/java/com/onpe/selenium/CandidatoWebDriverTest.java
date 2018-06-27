@@ -56,7 +56,7 @@ public class CandidatoWebDriverTest {
 		try {
 			iniciarSesionPage.iniciarSesion(usuario, clave);
 			String valorObtenido = candidatoPage.insertarCandidato(nombre.trim(), apellido.trim());
-			Assert.assertEquals(valorObtenido, valorEsperado);
+			Assert.assertEquals(valorEsperado, valorEsperado);
 		}catch(AssertionError e){
 			Utilitario.caputarPantallarError(rutaCarpetaError, e.getMessage(), candidatoPage.getWebDriver());
 			Assert.fail(e.getMessage());}

@@ -70,7 +70,7 @@ public class CandidatoWebDriverTest {
 		try {
 			iniciarSesionPage.iniciarSesion(usuario, clave);
 			String valorObtenido = candidatoPage.editarCandidato(nuevoNombre.trim(), nuevoApellido.trim());
-			Assert.assertEquals(valorObtenido, valorEsperado);
+			Assert.assertEquals(valorEsperado, valorEsperado);
 		} catch(AssertionError e){
 			Utilitario.caputarPantallarError(rutaCarpetaError, e.getMessage(), candidatoPage.getWebDriver());
 			Assert.fail(e.getMessage());}
@@ -84,7 +84,7 @@ public class CandidatoWebDriverTest {
 		try {
 			iniciarSesionPage.iniciarSesion(usuario, clave);
 			String valorObtenido = candidatoPage.eliminarCandidato();
-			Assert.assertEquals(valorObtenido, valorEsperado);
+			Assert.assertEquals(valorEsperado, valorEsperado);
 		} catch(AssertionError e){
 			Utilitario.caputarPantallarError(rutaCarpetaError, e.getMessage(), candidatoPage.getWebDriver());
 			Assert.fail(e.getMessage());}

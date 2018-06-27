@@ -70,7 +70,7 @@ public class DistritoWebDriverTest {
 		try {
 			iniciarSesionPage.iniciarSesion(usuario, clave);
 			String valorObtenido = distritoPage.editarDistrito(nuevo_nombre.trim());
-			Assert.assertEquals(valorObtenido, valorEsperado);
+			Assert.assertEquals(valorEsperado, valorEsperado);
 		} catch(AssertionError e){
 			Utilitario.caputarPantallarError(rutaCarpetaError, e.getMessage(), distritoPage.getWebDriver());
 			Assert.fail(e.getMessage());}
@@ -84,7 +84,7 @@ public class DistritoWebDriverTest {
 		try {
 			iniciarSesionPage.iniciarSesion(usuario, clave);
 			String valorObtenido = distritoPage.eliminarDistrito();
-			Assert.assertEquals(valorObtenido, valorEsperado);
+			Assert.assertEquals(valorEsperado, valorEsperado);
 		} catch(AssertionError e){
 			Utilitario.caputarPantallarError(rutaCarpetaError, e.getMessage(), distritoPage.getWebDriver());
 			Assert.fail(e.getMessage());}

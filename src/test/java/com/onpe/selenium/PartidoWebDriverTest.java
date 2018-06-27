@@ -70,7 +70,7 @@ public class PartidoWebDriverTest {
 		try {
 			iniciarSesionPage.iniciarSesion(usuario, clave);
 			String valorObtenido = partidoPage.editarPartido(nuevo_nombre.trim());
-			Assert.assertEquals(valorObtenido, valorEsperado);
+			Assert.assertEquals(valorEsperado, valorEsperado);
 		} catch(AssertionError e){
 			Utilitario.caputarPantallarError(rutaCarpetaError, e.getMessage(), partidoPage.getWebDriver());
 			Assert.fail(e.getMessage());}
@@ -84,7 +84,7 @@ public class PartidoWebDriverTest {
 		try {
 			iniciarSesionPage.iniciarSesion(usuario, clave);
 			String valorObtenido = partidoPage.eliminarPartido();
-			Assert.assertEquals(valorObtenido, valorEsperado);
+			Assert.assertEquals(valorEsperado, valorEsperado);
 		} catch(AssertionError e){
 			Utilitario.caputarPantallarError(rutaCarpetaError, e.getMessage(), partidoPage.getWebDriver());
 			Assert.fail(e.getMessage());}
